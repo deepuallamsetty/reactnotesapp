@@ -1,0 +1,24 @@
+.btnletter{
+  height: 40px;
+  width: 55px;
+  background-color: pink;
+  border-radius: 50%;
+  border-style: none;
+  font-size:20px;
+  margin-left: 18px;
+  padding-top: 7px;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding-top: 15px;
+  text-align: center;
+  color: azure;
+  
+
+}
+.notesname{
+
+  font-weight: bold;
+  padding-top: 27px;
+}
+@media only screen and (max-width: 600px){
+}

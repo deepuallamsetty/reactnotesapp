@@ -1,0 +1,141 @@
+.secondheader{
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.textcontainer{
+    background-color: #E8E8E8;
+    height: 26vh;
+    bottom: 20px;
+    position: absolute;
+    border-bottom-left-radius: 17px;
+    border-top-right-radius:17px;
+    width: 100%;
+    position:fixed;
+}
+.inputtextcontainer{
+    height: 20vh;
+    margin-top: 3vh;
+    margin-bottom:3vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+   border: none;
+   width: 77%;
+   border-radius: 5px;
+  background-color: white;
+  position:fixed;
+  
+}
+.inputext{
+    border: none;
+    height: 130px;
+    width: 80%;
+    outline: none;
+    resize: none;
+      
+}
+.submit{
+    justify-content: end;
+    margin-left: 180px;
+    margin-top: 60px;
+    
+
+}
+.enterednotes{
+    height: 63vh;
+    background-color: #F7ECDC;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    position: fixed;
+}
+  .header{
+    background-color: #E8E8E8;
+    height: 10vh;
+    width:100%;
+    
+}
+
+
+.Notescontent{
+    margin-left: 150px;
+    margin-top: 20px;
+}
+#text{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.datite{
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: row;
+    
+    
+}
+.datetime{
+    width: 120px;
+    margin-left: 30px;
+    font-size: 18px;
+    
+}
+.notentrytext{
+   padding-left: 10px;
+   padding-right: 80px;
+    margin-top: 30px;
+    flex-grow: 1;
+    font-size: 18px;
+
+   
+}
+.arrowimage{
+    padding-top: 30px;
+    padding-left: 10px;
+    display: none;
+}
+
+          
+@media only screen and (max-width:480px) and (max-height:800px) {
+    .textcontainer{
+        background-color: #E8E8E8;
+        width: 100%;
+        height: 24vh;
+        bottom: 20px;
+        position: fixed;
+        border-bottom-left-radius: 17px;
+        border-top-right-radius: 0px;
+       
+    }
+    .inputtextcontainer{
+       background-color: white;
+       height: 120px;
+       width: 310px;
+       position:fixed;
+    }
+    .inputext{
+    border: none;
+    height: 110px;
+    width: 255px;
+    resize: none;
+     
+}
+.submit{
+    justify-content: end;
+    margin-left: 0px;
+  
+    
+}
+.arrowimage{
+    padding-top: 30px;
+    padding-left: 10px;
+    display: block;
+}
+.shownotes{
+    display: block;
+}
+.hidenotes{
+    display: none;
+}
+}      

@@ -1,0 +1,216 @@
+
+ 
+ *{
+    margin: 0px;
+    padding: 0px;
+ }
+ 
+ .groupcontainer{
+    border-radius: 5px;
+    height: 320px;
+    width: 680px;
+    background-color: #FFFFFF;
+    position: fixed;
+    border-width: 5px;
+    box-shadow: 30px;
+    margin-top: -500px;
+    margin-left: 220px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+ 
+ }
+ .createnew{
+    padding: 25px;
+    padding-left: 40px;
+ }
+ .groupname{
+   padding: 25px;
+   padding-left: 40px;
+  
+}
+.choosecolor{
+   padding: 25px;
+
+   padding-left: 40px;
+}
+ input{
+    height: 30px;
+    width: 330px;
+    margin-top: 27px;
+    border-radius: 20px;
+    border-color: #CCCCCC;
+    border-style: solid;
+    margin-left: 10px;
+ }
+ 
+ .button1{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:  #B38BFA;
+    border-style: none;
+    margin-right: 10px;
+ }
+ .button2{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:  #FF79F2;
+    border-style: none;
+    margin-right: 10px;
+ }
+ .button3{
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color:  #43E6FC;
+    border-style: none;
+ }.button4{
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #F19576;
+    border-style: none;
+ }.button5{
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:  #0047FF;
+    border-style: none;
+ }.button6{
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:   #6691FF;
+    border-style: none;
+ }
+ .create{
+    height: 30px;
+    width: 100px;
+    background-color: black;
+    border-style: none;
+    color: white;
+    border-radius: 8px;
+    margin-left: 550px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+ .buttoncontainer{
+   margin-top: 25px;
+ }
+ ::placeholder {
+   margin-left: 10px;
+ }
+ ::-moz-placeholder {
+   text-align: center;
+   color: #999;
+   font-style: italic;
+ }
+ @media only screen and (max-width: 600px){
+   .groupcontainer{
+      border-radius: 5px;
+      height: 211px;
+      width: 284px;
+      background-color: #FFFFFF;
+      position: fixed;
+      border-width: 5px;
+      box-shadow: 30px;
+      margin-top: -480px;
+      margin-left: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }  
+   .createnew{
+      padding: 10px;
+      padding-left: 15px;
+      font-size: 20px;
+   }
+   .groupname{
+     padding: 10px;
+     padding-left: 15px;
+    font-size: 18px;
+  }
+  .choosecolor{
+     padding: 10px;
+      font-size: 18px;
+     padding-left: 15px;
+     margin-top: -10px;
+     
+  }
+  input{
+   height: 16px;
+   width: 120px;
+   margin-top: 16px;
+   border-radius: 20px;
+   border-color: #CCCCCC;
+   border-style: solid;
+   margin-left: 10px;
+   font-size: 7px;
+}
+.button1{
+   height: 17px;
+   width: 17px;
+   border-radius: 50%;
+   background-color:  #B38BFA;
+   border-style: none;
+   margin-right: 10px;
+}
+.button2{
+   height: 17px;
+   width: 17px;
+   border-radius: 50%;
+   background-color:  #FF79F2;
+   border-style: none;
+   margin-right: 5px;
+}
+.button3{
+   height: 17px;
+   width: 17px;
+   margin-right: 5px;
+   border-radius: 50%;
+   background-color:  #43E6FC;
+   border-style: none;
+}.button4{
+   height: 17px;
+   margin-right: 5px;
+   width: 17px;
+   border-radius: 50%;
+   background-color: #F19576;
+   border-style: none;
+}.button5{
+   height: 17px;
+   margin-right: 5px;
+   width: 17px;
+   border-radius: 50%;
+   background-color:  #0047FF;
+   border-style: none;
+}.button6{
+   height: 17px;
+   margin-right: 5px;
+   width: 17px;
+   border-radius: 50%;
+   background-color:   #6691FF;
+   border-style: none;
+}
+.create{
+   height: 32px;
+   width: 186px;
+   background-color: black;
+   border-style: none;
+   color: white;
+   border-radius: 8px;
+   margin-left: 0px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   text-align: center;
+   margin-left: 50px;
+}
+.buttoncontainer{
+  margin-top: 20px;
+}
+ }
+ 
