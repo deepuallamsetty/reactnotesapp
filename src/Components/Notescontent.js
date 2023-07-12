@@ -1,5 +1,8 @@
 import './Notescontent.css';
+import SubmitImage from './enter.png'
+import arrowImage from './arrow.png'
 import React, { useState ,useEffect} from 'react'; 
+
 function Notescontent ({selectedgrp,handleNotesHeading,setbackclicked,setnotesclicked,isnotesclicked}){
   const handleEnterkeynotes=(event)=>{
     if (event.key === "Enter" && !event.shiftKey) {
@@ -31,23 +34,26 @@ const date = new Date();
     const dateString = `${date.getDate()} ${monthName} ${date.getFullYear()}`;
 
 
+
 const handleNotescontent = () => {
-  if (selectedgrp !== null && inputnotes.trim() !== "") {
+  if (selectedgrp !== null && inputnotes.trim() !== '') {
     const updatedNotes = [...submittednotes];
-    const existingNotes = updatedNotes[selectedgrp] || "";
+    let existingNotes = updatedNotes[selectedgrp];
+    if (!Array.isArray(existingNotes)) {
+      existingNotes = [];
+    }
     const noteEntry = {
       date: dateString,
       time: time,
       text: inputnotes
     };
-    updatedNotes[selectedgrp] = `${existingNotes}\n${JSON.stringify(noteEntry)}`;
+    existingNotes.push(noteEntry);
+    updatedNotes[selectedgrp] = existingNotes;
     localStorage.setItem('submittednotes', JSON.stringify(updatedNotes));
-
-
     setsubmittednotes(updatedNotes);
     setinputnotes('');
   }
-}  
+};
 
 
 useEffect(() => {
@@ -77,44 +83,35 @@ useEffect(() => {
         }} >
        <div className="header" style={{display:"flex"}} >
          <div>
-         <img src='arrow.png' alt='arrow' className='arrowimage' onClick={handleBackNotes}  />
+         <img src={arrowImage} alt='arrow' className='arrowimage' onClick={handleBackNotes}  />
          </div>
        {handleNotesHeading()}
        </div>
        <div className='enterednotes'>
-       {submittednotes[selectedgrp] && (
-  <div >
-    {submittednotes[selectedgrp]
-      .split("\n")
-      .map((text, idx) => {
-        try {
-          const noteEntry = JSON.parse(text); 
-          return (
+       {submittednotes[selectedgrp] && Array.isArray(submittednotes[selectedgrp]) ? (
+        <div>
+          {submittednotes[selectedgrp].map((noteEntry, idx) => (
             <div key={idx} className='datite'>
-              <div style={{marginTop:"30px"}}>
-              <p className='datetime'>{noteEntry.time}</p>
-              <p className='datetime'>{noteEntry.date}</p>
+              <div style={{ marginTop: '30px' }}>
+                <p className='datetime'>{noteEntry.time}</p>
+                <p className='datetime'>{noteEntry.date}</p>
               </div>
               <div className='notentrytext'>
-              <p>{noteEntry.text}</p>
+                <p>{noteEntry.text}</p>
               </div>
-
             </div>
-          );
-        } catch (error) {
-          console.error("Invalid JSON:", error);
-          return null; 
-        }
-      })}
-  </div>
-)}
+          ))}
+        </div>
+      ) : (
+        <p></p>
+      )}
 </div>
 
 
            <div className="textcontainer">
               <div className="inputtextcontainer" >
               <textarea  className='inputext' placeholder='Enter your text here...........' value={inputnotes} onChange={handleinputNotes} onKeyPress={handleEnterkeynotes} ></textarea>
-              <img src='enter.png' alt='enter'className='submit' onClick={handleNotescontent}/>
+              <img src={SubmitImage}alt='enter'className='submit' onClick={handleNotescontent}/>
               </div>
            </div>
            
